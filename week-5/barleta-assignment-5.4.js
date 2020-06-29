@@ -1,30 +1,18 @@
 /*
 ============================================
-; Title:  barleta-exercise-5.3.js
+; Title:  barleta-assignment-5.4.js
 ; Author: Professor Krasso
 ; Date:   28 June 2020
 ; Modified By: Marie Nicole Barleta
-; Description: Object collection
+; Description: Filtering complex data structures
 ;===========================================
 */
 
 // import statement
 var header = require('../barleta-header.js');
-console.log(header.display("Marie", "Barleta", "Exercise 5.3"));
+console.log(header.display("Marie", "Barleta", "Assignment 5.4"));
 console.log("\n")
 
-/*
-  Expected output:
-  FirstName LastName
-  Exercise 5.3
-  Today's Date
-  -- COMPOSERS --
-  Last Name: Beethoven, Genre: Classical, Rating: 8
-  Last Name: Mozart, Genre: Classical, Rating: 10
-  Last Name: Bach, Genre: Classical, Rating: 9
-  Last Name: Haydn, Genre: Classical, Rating: 6
-  Last Name: Schubert, Genre: Classical, Rating: 5
-*/
 
 var composer =[
   {
@@ -63,8 +51,23 @@ var composer =[
   },
 ]
 
-composer.forEach(function(composer){
-console.log(
-"Last Name: " + composer.lastName + ", Genre: " +composer.genre+ ", Rating: " +composer.rating
-);
+
+
+console.log("-- COMPOSER BY RATING --")
+let ratings = composer.map((composers) => {
+  return "Rating: " +composers.rating +"\n" + "Composer: " +composers.lastName +"\n"
 })
+    ratings.forEach((rate) => {
+    console.log(rate)
+
+})
+
+
+
+console.log("-- COMPOSER BY GENRE --")
+let genres = composer.map((composers) => {
+  return "Genre: "+composers.genre+"\n" + "Composer: "+composers.lastName +"\n"
+})
+ genres.forEach((genre) => {
+   console.log(genre)
+ })

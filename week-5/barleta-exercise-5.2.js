@@ -4,7 +4,7 @@
 ; Author: Professor Krasso
 ; Date:   28 June 2020
 ; Modified By: Marie Nicole Barleta
-; Description: Find errors advanced arrays
+; Description: ES5 Built-In Functions
 ;===========================================
 */
 
