@@ -68,6 +68,6 @@ console.log("-- COMPOSER BY GENRE --")
 let genres = composer.map((composers) => {
   return "Genre: "+composers.genre+"\n" + "Composer: "+composers.lastName +"\n"
 })
- genres.forEach((genre) => {
+   genres.forEach((genre) => {
    console.log(genre)
  })
