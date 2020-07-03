@@ -25,16 +25,16 @@ var employees = {
 
   idNum: 0452556,
 
-    id: {
+    id:
         name: "Nicole",
-        rate: 15,
-        type: "Full-time"
+        rate: 15
+        types: "Full-time"
 
 
 
-}
 
-console.log("Employee ID: " + "employees.idNum")
+
+console.log("Employee ID: " , "employees.idNum")
 console.log("Employee name: " + employees.[name])
 console.log("Employee rate: " + employees.['id']['rate'])
 console.log("Employee name: " + "employees.type")
