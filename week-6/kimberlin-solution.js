@@ -12,8 +12,8 @@
 
   1. Added parentheses to declare team message
   2. Got rid of brackets on greatJob and needsImprovement.
-  2. Added colon to properly declare objects.
-  3. Got rid of parentheses on declared objects.
+  3. Added colon to properly declare objects.
+  4. Got rid of parentheses on declared objects.
 
   */
 
