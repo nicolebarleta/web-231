@@ -20,12 +20,12 @@ console.log("\n")
 
 try {
   // variables
-  let x = 0
-  let y = 1
-  const sum = y / x
+  let x = -1
+  let y = -1
+  const sum = x + y
 
   // if statement
-  if (sum === Infinity) throw 'DivideByZeroException'
+  if (sum < 0) throw 'not positive'
 
   // output
   console.log(sum)
