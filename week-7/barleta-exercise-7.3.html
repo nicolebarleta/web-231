@@ -1,0 +1,55 @@
+<!---- ===========================================
+  	; Title: Exercise 7.3
+  	; Author: Professor Krasso
+  	; Date: 11 July 2020
+  	; Modified By: Marie Nicole Barleta
+  	; Description: Demonstrates document.write
+  	;=========================================== -->
+
+  	<!Doctype html>
+  	<html lang="en">
+  	<head>
+  	<meta charset="utf-8">
+
+    <title>Exercise 7.3</title>
+
+    <link rel="stylesheet" href="site.css">
+  	</head>
+
+  	<body>
+
+      <h1>SHOPPING LIST v.1 </h1>
+      <ol id="list"></ol>
+      <div id="todo"></div>
+        <script>
+        document.getElementById('list').innerHTML =
+       " <li>Oranges</li>" +
+       "  <li>Apples</li>" +
+       "  <li>Pears</li>" +
+       " <li>Limes</li>" +
+       " <li>Lemons</li>";
+
+
+          document.getElementById('todo').innerHTML =
+          "<h1>SHOPPING LIST v.2 </h1>"+
+          "<table>"+
+          "<thead>"+
+          "<tr>"+
+          "<th>Id</th>"+
+          "<th>Item</th>"+
+          "</thead>"+
+          "<tbody>"+
+
+           "<tr><td>1</td><td>Oranges</td></tr>"+
+           "<tr><td>2</td><td>Apples</td></tr>"+
+           "<tr><td>3</td><td>Pears</td></tr>"+
+           "<tr><td>4</td><td>Limes</td></tr>"+
+           "<tr><td>5</td><td>Lemons</td></tr>";
+
+          </script>
+
+
+
+
+  	</body>
+  	</html>
