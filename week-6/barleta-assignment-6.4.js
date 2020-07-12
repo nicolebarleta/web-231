@@ -38,4 +38,4 @@ var ticket = {
 
 };
 
-console.log("Ticket " + ticket.id + " was created on " + "<"+ticket.dateCreated +">" + " and assigned to employee " + ticket.person.firstName +" "+ticket.person.lastName +" ("+ticket.person.jobTitle+")");
+console.log("Ticket " + ticket.id + " was created on " + ticket.dateCreated + " and assigned to employee " + ticket.person.firstName +" "+ticket.person.lastName +" ("+ticket.person.jobTitle+")");
