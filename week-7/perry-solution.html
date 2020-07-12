@@ -1,0 +1,45 @@
+<!--
+Title: Perry- Discussion- 7.1.js
+Author: Erica Perry
+Date:7/09/2020
+Modified: Erica Perry
+Description: At least 2 errors
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<h1> Do you love snacks? </h1>
+
+
+<h2> Happiness </h2>
+
+<p id = "Yummy"> smores ! </p>
+
+
+<p id = "delicous"> </p>
+
+
+
+<script>
+
+/* multiple errors SyntaxErrors */
+
+/*Solution: Added document.getElementById syntax for ID Yummy to add the necessary sentence for the right output*/
+
+var myElement = document.getElementById("Yummy");
+document.getElementById("delicous").innerHTML;
+document.getElementById("Yummy").innerHTML = " A snack that makes me happy is" + myElement.innerHTML;
+
+/* expected outcome is
+* Do you love snacks?
+* Happiness
+* " A snack that makes me happy is smores !
+*/
+
+</script>
+</body>
+</html>
