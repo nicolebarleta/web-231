@@ -25,3 +25,7 @@ th {
 tr:nth-child(even) {
   background-color: lightsteelblue;
 }
+
+a:visited{
+  color: blue;
+}

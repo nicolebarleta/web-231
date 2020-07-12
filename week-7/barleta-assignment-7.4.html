@@ -1,0 +1,82 @@
+<!---- ===========================================
+  	; Title: Assignment 7.4
+  	; Author: Professor Krasso
+  	; Date: 12 July 2020
+  	; Modified By: Marie Nicole Barleta
+  	; Description: Demonstrates Inline JavaScript Functions
+  	;=========================================== -->
+
+  	<!Doctype html>
+  	<html lang="en">
+  	<head>
+  	<meta charset="utf-8">
+
+    <title>Assignment 7.4</title>
+
+    <link rel="stylesheet" href="site.css">
+    <script>
+      // import statement
+     var header = require('../barleta-header.js');
+     console.log(header.display("Marie", "Barleta", "Assignment 7.4"));
+     console.log("\n")
+     </script>
+  	</head>
+
+  	<body>
+
+      <div id="todo"></div>
+
+
+        <script>
+
+          document.getElementById('todo').innerHTML =
+          "<h1>Computer Components</h1>"+
+          "<table>"+
+          "<thead>"+
+          "<tr>"+
+          "<th>Id</th>"+
+          "<th>Name</th>"+
+          "<th>Amount</th>"+
+          "<th>Functions</th>"+
+          "</thead>"+
+          "<tbody>"+
+
+           "<tr>"+
+            "<td>1</td><td>Laptop</td><td>1,500.99</td>"+
+            "<td><a href=\"javascript:alert('1');\">EDIT</>"+
+              "<a href onclick=\"confirm('Are you sure?')\"> | DELETE</td>"+
+          "</tr>"+
+
+          "<tr>"+
+            "<td>2</td><td>Motherboard</td><td>35.70</td>"+
+            "<td><a href=\"javascript:alert('2');\">EDIT</>"+
+              "<a href onclick=\"confirm('Are you sure?')\"> | DELETE</td>"+
+          "</tr>"+
+
+
+           "<tr>"+
+            "<td>3</td><td>Monitor</td><td>174.99</td>"+
+            "<td><a href=\"javascript:alert('3');\">EDIT</>"+
+              "<a href onclick=\"confirm('Are you sure?')\"> | DELETE</td>"+
+          "</tr>"+
+           "<tr>"+
+            "<td>4</td><td>Mouse</td><td>13.99</td>"+
+            "<td><a href=\"javascript:alert('4');\">EDIT</>"+
+              "<a href onclick=\"confirm('Are you sure?')\"> | DELETE</td>"+
+          "</tr>"+
+
+
+           "<tr>"+
+            "<td>5</td><td>Keyboard</td><td>14.50</td>"+
+            "<td><a href=\"javascript:alert('5');\">EDIT</>"+
+              "<a href onclick=\"confirm('Are you sure?');\"> | DELETE</td>"+
+          "</tr>";
+
+
+
+
+          </script>
+
+
+  	</body>
+  	</html>
