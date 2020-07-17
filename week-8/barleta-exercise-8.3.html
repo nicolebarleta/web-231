@@ -7,36 +7,77 @@
 ; Description: jQuery
 ;===========================================
 -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Exercise 8.2</title>
 
+  <title>Exercise 8.3</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-  <style type="text/css">
-    html{
-      font-family: 'Roboto', sans-serif;
 
-    }
-    ul {
-      list-style: none;
-      margin: 0 auto;
-      text-align: center;
-      font-size: 20px;
-    }
+  <style>
+table {
+  border-collapse: collapse;
+}
 
-    #topBar {
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 5px;
+}
+
+th {
+  background-color: steelblue;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: lightsteelblue;
+}
+
+a:visited{
+  color: blue;
+}
+
+
+#topBar {
           background-color: cornflowerblue;
           width: 100%;
           height: 50px;
     }
+
+#main {
+  margin-top: 20px;
+  margin-left: 20px;
+
+}
   </style>
+
 </head>
 <body>
 <div id="topBar"></div>
+<div id="main">
+
+<h1>Lorem Ipsum</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eget ipsum lobortis, volutpat mauris vitae, consectetur tortor. Sed nisl sapien, tincidunt at ullamcorper vel, convallis vitae diam. In hac habitasse platea dictumst. Ut vel sem sit amet sem vulputate pharetra sit amet eget justo. Nullam porttitor mollis quam. Donec ultricies nibh non sem sodales, a semper lacus molestie. Cras interdum molestie efficitur. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla pulvinar, sem non porttitor condimentum, arcu dui tempor metus, scelerisque luctus velit diam ut enim. Etiam malesuada, tellus molestie accumsan tincidunt, velit massa luctus orci, sit amet ultrices nunc ante vel odio.
+  Vestibulum tortor tortor, dictum ac eleifend non, laoreet a tellus.</p>
+<button>Toggle </button>
+<br>
+<br>
+
+<script type="text/javascript">
+  $("button").click(function(){
+     $("p").toggle();
+  });
+
+</script>
+
+
+
 <div id="fruits"></div>
+
 
 <script>
   var fruits = [
@@ -47,17 +88,40 @@
     {id: 105, type: 'Coconuts'}
   ];
 
-var out = "<ul>" + "<h1>FRUITS</h1>"
+var out = "<table>" + "<th> ID</th>" + "<th> Type </th>"
 for (var x = 0; x < fruits.length; x++) {
-    out += "<li>" + fruits[x].id + " " + fruits[x].type + " </li>";
+    out += "<tr>" +
+       "<td><a href=\"#\" class=\"fruitId\">"+fruits[x].id +"</td>" +
+      "<td>" + fruits[x].type +"</td>"+
+      "</tr>";
 }
-out += " </ul>";
+out += " </table>";
 
-document.getElementById('fruits').innerHTML = out;
+document.getElementById('fruits').innerHTML = out
 
 </script>
 
 
+</div>
 
+
+
+<script>
+$(function() {
+
+ $(".fruitId").click(function(event) {
+
+     event.preventDefault();
+
+     var fruitId = $(this).text();
+
+     var fruitType = $(this).closest("td").next().text();
+
+     alert("ID: "+ fruitId + " Type: " + fruitType);
+
+  });
+
+});
+</script>
 </body>
 </html>
