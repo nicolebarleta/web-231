@@ -15,21 +15,20 @@
 
 <body>
 
-    <div class="articles">
+    <div class="header">
         <input id="input" value="Change header and press enter.." type="text" size="50">
         <h1>Header</h1>
 
     </div>
 
     <script>
-      $('#input').on('change', function() {
+      //find multiple errors
+      $('input').on('change', function() {
       var val, h1;
-      val = $("#input").val();
-      h1 = $(".articles").children("h1");
-      h1.text(val);
-
-      h1 = $(".articles");
-      h1.css('color','CornflowerBlue');
+      value = $(".input").val();
+      h2 = $("#header").parent-children("h1");
+      header.text(val);
+      h1.css('color','cornflowerblue');
 
   });
     </script>
