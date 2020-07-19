@@ -2,7 +2,7 @@
 ============================================
 ; Title: Assignment 8.4
 ; Author: Professor Krasso
-; Date: 07 17 2020
+; Date: 07 19 2020
 ; Modified by: Marie Nicole Barleta
 ; Description: Putting it all together
 ;===========================================
@@ -36,11 +36,23 @@
   // Don't remove this, just add your code to the body of the event (curly braces)
   $(function () {
     $("table tr").click(function () {
-      getEmployee(find('td:first').html())
-
+      var id = $(this).find('td:first').html();
+      getEmployee(id);
     })
   });
 
+
+function employee(id, firstName, lastName, title) {
+
+this.id = id;
+
+this.firstName = firstName;
+
+this.lastName = lastName;
+
+this.title = title;
+
+}
 
   var employee = [
     {id: 1, firstName: 'Thomas', lastName:'Edison', title:'Software Engineer'},
@@ -50,15 +62,16 @@
     {id: 5, firstName: 'Alexander', lastName:'Bell', title:'Business Analyst'},
   ];
 
-function getEmployee(employee, id){
+function getEmployee(id){
   for (var x = 0; x < employee.length; x++){
-    alert(employee[x].id +" " + employee[x].firstName + " " + employee[x].lastName + " "+ employee[x].title)
-
+    if(employee[x].id == id){
+    return alert(employee[x].id +" " + employee[x].firstName + " " + employee[x].lastName + " "+ employee[x].title)
+    }
   }
 
 }
 var output=
-"<h1>Employee Listing</h1>"+"<table>" + "<th> ID</th>" + "<th> First Name </th>"+ "<th> Last Name</th>" + "<th> Title </th>"
+"<h1>Employee Listing</h1>"+"<table id=\"employee\">" + "<th> ID</th>" + "<th> First Name </th>"+ "<th> Last Name</th>" + "<th> Title </th>" + "<tbody>"
 for (var x = 0; x < employee.length; x++) {
     output += "<tr>" +
        "<td>"+employee[x].id +"</td>" +
@@ -67,7 +80,7 @@ for (var x = 0; x < employee.length; x++) {
       "<td>" + employee[x].title +"</td>"+
       "</tr>";
 }
-output += " </table>";
+output += "</table>";
 
 document.getElementById('emps').innerHTML = output
 
