@@ -1,0 +1,58 @@
+<!--/*
+Title: Perry- Discussion- 8.1.js
+Author: Erica Perry
+Date:7/18/2020
+Modified: Marie Nicole Barleta
+Description: multiple errors
+*/-->
+
+
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta charset = "UTF-8">
+<title> Discussion Board 8.1 - DOM Manipulation (jQuery)</title>
+
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <p> What's Your Favorite show ? </p>
+
+<br/>
+<table >
+<tr >
+<td ><a href = "#" class = "favoriteshow"> 1 </a></td>
+<td > SPONGEBOB </td>
+</tr>
+<tr>
+
+<td><a href = "#" class = "favoriteshow" > 2 </a></td>
+<td> FAMILY GUY </td>
+</tr>
+<tr>
+<td><a href = "#" class = "favoriteshow" > 3 </a></td>
+<td> MARTIN </td>
+</tr>
+</table>
+
+<script>
+$(function() {
+$(".favoriteshow").click(function(event) {
+event.preventDefault();
+var favoriteShowId= $(this).text();
+var favoriteShowType = $(this).closest("td").next().text();
+alert("{favoriteShow_id: " + favoriteShowId + favoriteShowType +"}");
+});
+});
+</script>
+</body>
+<!--MY SOLUTION:
+1. Got rid of added spaces in each tag
+2. Got rid of second table of favorite shows because it's redundant
+3. Added Script beginning and end tag in the jQuery function
+4. Added favoriteShowType in alert event
+6. Added a href tag in spongebob table
+7. Added end tag for head and body
+-->
+</html>
