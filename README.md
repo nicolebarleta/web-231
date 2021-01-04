@@ -1,7 +1,7 @@
 # web-231
 Introduction to JavaScript
 
-# contributors
+# contributors/teachers
 
 Professor Krasso - Bellevue University
 
